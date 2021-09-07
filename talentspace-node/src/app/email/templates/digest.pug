@@ -1,0 +1,31 @@
+style(type="text/css").
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid black;
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+h2 Hello there! Here is your daily job alert digest
+
+table
+    thead
+        tr
+            th Job Title
+            th City
+            th Company 
+            th Investors of the Company 
+        tbody 
+        each job in jobList 
+            tr
+                td #{job.title}
+                td #{job.city}
+                td #{job.name}
+                td 
+                    ul 
+                        each investor in job.investors 
+                            li= investor.name

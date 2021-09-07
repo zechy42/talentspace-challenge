@@ -1,0 +1,12 @@
+h2 Hello there! We have a new job alert for you. 
+h3 Here are the job details
+p Company: 
+    b #{companyName}
+p The job title is: 
+    b #{title}
+p It's located in: 
+    b #{city}
+p The investors are 
+  ul 
+    each val in investors
+        li= val.name
